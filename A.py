@@ -17,7 +17,7 @@ def function(x):
 x_max, y_max = hill_climbing(function, x_start=0)
 print("Maximum x:", x_max)
 print("Maximum f(x):", y_max)
-```
+
 
 """Output:
 
@@ -25,4 +25,4 @@ Maximum x: 2.0
 Maximum f(x): 4.0
 """
 
----
+

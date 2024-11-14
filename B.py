@@ -11,8 +11,8 @@ def a_star_algorithm(graph, heuristic, start, goal):
     parents = {start: None}
 
     while not open_list.empty():
-           current = open_list.get()
-
+        f_cost, current = open_list.get()  
+        
         if current == goal:
             path = []
             while current is not None:
@@ -27,7 +27,8 @@ def a_star_algorithm(graph, heuristic, start, goal):
                 f_cost = g_cost + heuristic[neighbor]
                 open_list.put((f_cost, neighbor))
                 parents[neighbor] = current
-    return None
+
+    return None  
 
 graph = {
     'A': [('B', 9), ('C', 4), ('D', 21)],
@@ -52,8 +53,6 @@ heuristic = {
 path = a_star_algorithm(graph, heuristic, 'A', 'G')
 print("Path from A to G:", path)
 
-
-#python3 a_star_algorithm.py
 
 """Output:
 Path from A to G: ['A', 'C', 'F', 'G']"""
